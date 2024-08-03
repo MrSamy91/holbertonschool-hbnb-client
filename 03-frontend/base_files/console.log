@@ -1,0 +1,24 @@
+document.getElementById('country-filter').addEventListener('change', (event) => {
+    const selectedCountry = event.target.value; // Obtenir la valeur sélectionnée
+    console.log('Selected Country:', selectedCountry); // Débogage
+
+    const places = document.querySelectorAll('.place-card'); // Obtenir toutes les cartes de lieu
+
+    places.forEach(place => {
+        const locationParagraph = place.querySelector('.content p:nth-of-type(3)');
+        if (locationParagraph) {
+            const locationText = locationParagraph.textContent;
+            const countryName = locationText.split(', ')[1]; // Extraire le nom du pays
+            console.log('Country Name:', countryName); // Débogage
+
+            if (selectedCountry === '' || countryName === selectedCountry) {
+                place.style.display = 'block'; // Afficher si le pays correspond ou si "All Countries" est sélectionné
+            } else {
+                place.style.display = 'none'; // Masquer sinon
+            }
+        } else {
+            console.error('No location paragraph found for place:', place); // Débogage
+            place.style.display = 'none'; // Masquer si le paragraphe de localisation n'est pas trouvé
+        }
+    });
+});

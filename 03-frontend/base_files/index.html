@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Places</title>
+    <link rel="icon" type="image/png" href="./icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="/"><img src="logo.png" alt="HBnB logo" width="160" height="80"></a>
+        </div>
+        <nav>
+            <div class="button-container">
+                <a href="login.html" class="login-button" id="login-link"><img src="connexion.png" width="40" height="40"></a>
+                    <i class="fas fa-sign-in-alt"></i>
+                </a>
+                <a href="index.html" class="home-button"><img src="icon.png" width="40" height="40"></a>
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section id="available-places">
+            <div class="centered-content">
+                <h2 class="section-title">Available Places</h2>
+                <div id="filter">
+                    <label for="country-filter"><b>Filter by Country:</b></label>
+                    <select id="country-filter">
+                        <option value="">All Countries</option>
+                        <option value="United States">United States</option>
+                        <option value="Canada">Canada</option>
+                        <!-- Ajoutez d'autres pays ici si nécessaire -->
+                    </select>
+                </div>
+            </div>
+            <div id="places-list">
+                <div class="place-card">
+                    <img src="beautiful-beach-house.jpg" alt="Beautiful Beach House">
+                    <div class="content">
+                        <h3>Beautiful Beach House</h3>
+                        <p>Price per night: $150</p>
+                        <p>Location: Los Angeles, United States</p>
+                    </div>
+                    <a href="place.html" class="details-button">View Details</a>
+                </div>
+                <div class="place-card cozy-cabin">
+                    <img src="cozy-cabin.jpg" alt="Cozy Cabin">
+                    <div class="content">
+                        <h3>Cozy Cabin</h3>
+                        <p>Price per night: $100</p>
+                        <p>Location: Toronto, Canada</p>
+                    </div>
+                    <a href="place.html" class="details-button">View Details</a>
+                </div>
+                <div class="place-card modern-apartment">
+                    <img src="modern-apartment.jpg" alt="Modern Apartment">
+                    <div class="content">
+                        <h3>Modern Apartment</h3>
+                        <p>Price per night: $200</p>
+                        <p>Location: New York, United States</p>
+                    </div>
+                    <a href="place.html" class="details-button">View Details</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bouton Déconnecter -->
+    <button id="logout-button" class="logout-button">Déconnecter</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 HBnB Evolution. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
